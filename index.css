@@ -1,0 +1,32 @@
+h1 {
+    font-size: 50px
+}
+body {
+    margin : 0;
+    padding : 0;
+    background-color: #f5f5f5;
+}
+main {
+    display: flex;
+    flex-direction:row;
+}
+
+header {
+    background-color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+
+.chat-list{
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+form input[type="radio"] {
+	margin-right :10px ;
+}
+
+form label{
+	display:block ;
+	margin-top :20px ;
+}

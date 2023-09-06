@@ -1,65 +1,56 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질문하기!</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project01</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- js -->
+    <script src="./index.js" defer type="module"></script>
   </head>
   <body>
-    <div class="container">
-        <form>
-            <input type="text">
-            <button type="submit">질문하기!</button>
+    <header>
+        <h1>집밥 뭐해먹을까?</h1>
+        <div class="thumbnail-container">
+            <img src="index_image01.png" alt="덮밥사진" class="thumbnail">
+            <img src="index_image02.png" alt="김치찌개" class="thumbnail">
+            <img src="index_image03.png" alt="제육볶음" class="thumbnail">
+            
+        </div>
+    </header>
+
+        <ul class = "chat-list"></ul>
+    
+    <main class="main">
+        <form method="post">
+            <label for="food type">내가 먹고 싶은 음식은</label>
+            <input type="radio" id="food type" name="food type" value="한식">한식
+            <input type="radio" id="food type" name="food type" value="양식">양식
+            <input type="radio" id="food type" name="food type" value="중식">중식
+            <input type="radio" id="food type" name="food type" value="분식">분식
+            <br>
+
+            <label for="weather">오늘의 날씨는</label>
+            <input type="radio" id="weather" name="weather" value="엄청 더움">엄청 더움
+            <input type="radio" id="weather" name="weather" value="엄청 추움">엄청 추움
+            <input type="radio" id="weather" name="weather" value="맑음">맑음
+            <input type="radio" id="weather" name="weather" value="구름">구름            
+            <input type="radio" id="weather" name="weather" value="비">비  
+            
+            <button type="submit">메뉴 추천!</button>
         </form>
-        <div class="answer"></div>
-    </div>
-    <script>
-        const $input = document.querySelector('input')
-        const $button = document.querySelector('button')
-        const $answer = document.querySelector('.answer')
+        
+        <div>
+            <button id="recipe-button" type="button">레시피 보기</button>
+            <button id="new-menu-button" type="button">다른 메뉴 보기</button>
+        </div>
+        
+    </main>
 
-        const data = []
-        data.push({
-            "role": "system",
-            "content": "assitant는 점심시간 메뉴를 추천해주는 요리사입니다."
-        })
+    <footer></footer>
 
-        const url = `http://estsoft-openai-api.jejucodingcamp.workers.dev/`
-
-        $button.addEventListener('click', e=> {
-            e.preventDefault()
-            const contents = $input.value
-            data.push({
-                "role": "user",
-                "content": contents
-            })
-
-            $input.value = ''
-
-            chatGPTAPI()
-        })
-
-        function chatGPTAPI() {
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data),
-                redirect: 'follow'
-            })
-            .then(res => res.json())
-            .then(res => {
-                console.log(res)
-                // 답변 온 것을 assistant로 저장
-                $answer.innerHTML =
-                `<p>${res.choices[0].message.content}</p>`
-            })
-        }
-    </script>
-    
-    
-
+    <script src="index.js"></script>
+    <!-- <script src=""></script> -->
   </body>
 </html>
