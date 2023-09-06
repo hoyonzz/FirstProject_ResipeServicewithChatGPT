@@ -15,7 +15,7 @@
 
 ## 2. 개발 환경 및 배포 URL
 ### 2.1 개발 환경
-
+- HTML, CSS, 자바스크립트
 ### 2.2 배포 URL
 -https://hoyonzz.github.io/Project01/
 
