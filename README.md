@@ -22,7 +22,7 @@
 ### 3.2 개발 일정(WBS)
 - 아이디어 도출 -> 아이디어 맞게 일정 수립 -> HTML로 UI구축 -> CSS로 디자인 -> JS 코드 연결
 
-<img src="썸네일.pngG"  width="700" height="370">
+<img src="./썸네일.png"  width="700" height="370">
 
 
 
