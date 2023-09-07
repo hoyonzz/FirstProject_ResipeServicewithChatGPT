@@ -21,7 +21,9 @@
 
 ### 3.2 개발 일정(WBS)
 - 아이디어 도출 -> 아이디어 맞게 일정 수립 -> HTML로 UI구축 -> CSS로 디자인 -> JS 코드 연결
-![image](https://github.com/hoyonzz/Project01/assets/129498722/a769c2e4-95e1-4f68-8153-b135c16468ed)
+
+  ![Uploading image.png…]()
+
 
 
 ### 4. 개발하며 느낀점
