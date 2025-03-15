@@ -18,6 +18,7 @@
 - HTML, CSS, 자바스크립트
 ### 2.2 배포 URL
 -https://hoyonzz.github.io/Project01/
+-부트캠프 종료로 인해 Gpt API가 끝나 배포 종료하였습니다.
 
 
 ### 3.2 개발 일정(WBS)
